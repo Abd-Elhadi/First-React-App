@@ -1,0 +1,137 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+
+nav {
+    display: flex;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    padding: 20px;
+    height: 90px;
+    transition: 0.3s;
+    
+}
+
+.nav-logo_text {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+nav img {
+    margin-right: 7px;
+    width: 50px;
+}
+
+nav .nav-logo_text {
+    color: #61DAFB;
+    font-size: 22px;
+}
+
+.toggler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggler-light {
+    color: #c5d5e6;
+}
+
+.dark .toggler-dark {
+    color: #c5d5e6;
+}
+
+nav.dark {
+    background-color: #21222A;
+    color: #DEEBF8;
+}
+
+/* start special */
+.toggle-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+.toggle-switch {
+    background-color: #282D35;
+    width: 35px;
+    height: 20px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.toggle-switch::before {
+    content: '';
+    font-weight: 900;
+    background-color: #DEEBF8;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    border-radius: 50%;
+    top: 2.2px;
+    left: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background-color: #DEEBF8;
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+    content: '';
+    left: 17px;
+    background-color: #282D35;
+}
+/* end special */
+
+main {
+    padding: 55px 20px;
+    height: calc(100vh - 90px);
+
+    background-image: url('./logo192.png');
+    background-repeat: no-repeat;
+    background-position: right 75%;
+    transition: 0.3s;
+    /* background-position: 122%; */
+    /* background-size: 30%; */
+}
+
+main.dark {
+    background-color: #282D35;
+    color: #DEEBF8;
+}
+
+.main-title {
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: -0.05em;
+}
+
+.main-facts {
+    /* list-style: none; */
+    margin-top: 45px;
+    /* color: #61DBFB; */
+}
+
+.main-facts li {
+    position: relative;
+    margin: 5px 0;
+    font-size: 15px;
+    line-height: 20px;
+    padding-block: 5px;
+}
+
+.main-facts li::marker {
+    color:  #61DAFB;
+    font-size: 1.4rem;
+}
